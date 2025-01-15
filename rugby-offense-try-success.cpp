@@ -39,8 +39,8 @@ vector<Player> generateTeam() {
         Player forward;
         forward.position = forwards[i % forwards.size()];
         forward.weight = randomDouble(90.0, 130.0);
-        forward.tackleTechnique = randomDouble(0.5, 0.9);
-        forward.speed = randomDouble(5.0, 7.0);
+        forward.tackleTechnique = randomDouble(0.45, 0.95);
+        forward.speed = randomDouble(5.1, 8.5);
         forward.isLastDefender = false;
         team.push_back(forward);
     }
@@ -50,7 +50,7 @@ vector<Player> generateTeam() {
         Player back;
         back.position = backs[i % (backs.size() - 1)]; // Exclude "Fullback" for now
         back.weight = randomDouble(70.0, 100.0);
-        back.tackleTechnique = randomDouble(0.7, 1.0);
+        back.tackleTechnique = randomDouble(0.65, 1.0);
         back.speed = randomDouble(7.0, 10.0);
         back.isLastDefender = false;
         team.push_back(back);
@@ -156,8 +156,8 @@ int main() {
     // Generate the runner
     Runner runner;
     runner.position = "Winger";
-    runner.weight = randomDouble(75.0, 95.0);
-    runner.speed = randomDouble(8.0, 10.0);
+    runner.weight = randomDouble(75.0, 90.0);
+    runner.speed = randomDouble(8.0, 11.0);
     runner.offenseStat = randomDouble(0.1, 0.75); // Higher offense stat improves chances
 
     // Simulate the try path and count attempts
